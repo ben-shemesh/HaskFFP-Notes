@@ -98,14 +98,29 @@ Chapter 1
                     thus the x is reduced to another identity function (𝝺ȥ.ȥ).
                     and since there is nothing to apply to the reduced intial function there is nothing to reduce.
 
-            --((𝝺𝞌.𝞌)(𝝺ȥ.ȥ))ɗ => the intial abstraction which is an identity function
+            --(()(𝝺ȥ.ȥ))ɗ => the intial abstraction which is an identity function
                 [𝞌 := (𝝺ȥ.ȥ)ɗ] => the beta reduction is applied to (𝝺𝞌.𝞌) reducing it to (𝝺ȥ.ȥ)ɗ.
                      [(𝝺ȥ.ȥ)ɗ] => beta reduction is applied again, reducing the IF to [ȥ := ɗ]
                       [ȥ := ɗ] => there is nothing else to reduce so ɗ is the evaluated result.
                             ɗ
     -- beta reduction's process stops when there are either no more heads or lambdas left to apply
-        or no more arguments to apply functions to. 
+        or no more arguments to apply functions to.
+
     -- computation process:
         1.)  intial lambda
         2.) a finite sequence of lambdas terms each deduced from the procedding term by BR.
         3.) keep following this sequence untill there are no more heads left and no more arguments to apply functions to.
+
+    -- Free Variables (FV)
+        -- head functions purpose is to bind variables in the head to variable in the body
+        these variables must have the same value throughout the expression.
+        -- variables that are inside of the body of the expression but not bound to the head
+        are called **free variables**.
+            𝝺𝞌.𝞌ȥ
+            -the x in the head is bound to the x in the body
+                the z is in the body but is not bound to anything in the head thus it is a FV
+            - when we apply this function to an argument nothing can be done with the z its 
+                irreducible.
+        -- Alpha equivalence cannot be applied to FV because there is nothing to bind them to
+            in the lambdas head  
+    
