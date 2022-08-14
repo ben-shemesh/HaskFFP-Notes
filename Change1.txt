@@ -41,3 +41,33 @@ Chapter 1
    that once a function is given an input the output should be predictable/consistant.
 
 -- Functions are nothing but mappings of a set of inputs to a set of outputs. 
+1.4
+-- Lambda calculus has three basic components/lambda terms
+    1. ) expression 2.) variables 3.) abstractions
+    An expression is a superset of the other 2, variables names, an abstractions or a combonation.
+    -- the simplest expression is a single variable.
+    -- variables have no meaning or value; they are only names for potential
+        inputs in a function.
+    -- and abstraction is a function. 
+    -- abstractions consist of 2 parts: the head and the body.
+        the head of the function is a 𝝺 (lambda) followed by a variable name
+        the body of the function is also an expression 
+            a simple function might look like this:
+
+                𝝺𝞌 𝞌 => is called and anonymous function (AF)
+
+            the variable (𝞌) name in the head (𝝺𝞌)is the parameter
+            and connects all the instances of the same variable in the function body.
+            . each 𝞌 will have the value of that argument
+
+        -- a named function can be called by another function by an AF cannot.
+    -- Alpha equivalence (AE)
+        the typical expression of AE in Lambda cal:
+            𝝺𝞌 𝞌
+        the variable is not semantically meaningful expect in the role of a 
+        singular expression, this is AE.
+            𝝺𝞌.𝞌
+            𝝺ȥ.ȥ
+            𝝺ɗ.ɗ
+        these all mean the same thing, a mapping of the variable in the head with that
+        in the body. 
