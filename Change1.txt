@@ -70,4 +70,42 @@ Chapter 1
             𝝺ȥ.ȥ
             𝝺ɗ.ɗ
         these all mean the same thing, a mapping of the variable in the head with that
-        in the body. 
+        in the body.
+1.5 Beta Reduction
+    -- once a function takes an argument(s) and the argument(s) is applied, the input value (the argument)
+        is then subsituted for the all instances of the bound variables within the body of the
+        abstraction. The head of the abstraction is then eliminated, since its only purpose was to bind a variable (ie the argument).
+        ^___ is called Beta Reduction.
+
+        *** Replacing the bound variables with the value of the argument, and eliminating the head. 
+        Eliminating the head tells you the function has been applied.
+        thus:
+            𝝺𝞌.𝞌
+            2 will be used as the argument
+            this will bind the number 2 to all instances of the variable in the body.
+            and eliminate the head.
+            (𝝺𝞌.𝞌)2
+                2
+            the only bound variable is the single 𝞌 in the head
+            thus applying this function to 2 returns 2, this is an identity function.
+                -- it accepts one argument and returns the argument bound to it.
+                    all instances of x within the function must have the same value.
+    -- identity functions call also be applied to another identity function
+            --(𝝺𝞌.𝞌)(𝝺ȥ.ȥ)
+                this is reduce like this:
+                    (𝝺𝞌.𝞌)(𝝺ȥ.ȥ)
+                    [𝞌 := (𝝺ȥ.ȥ)]
+                    thus the x is reduced to another identity function (𝝺ȥ.ȥ).
+                    and since there is nothing to apply to the reduced intial function there is nothing to reduce.
+
+            --((𝝺𝞌.𝞌)(𝝺ȥ.ȥ))ɗ => the intial abstraction which is an identity function
+                [𝞌 := (𝝺ȥ.ȥ)ɗ] => the beta reduction is applied to (𝝺𝞌.𝞌) reducing it to (𝝺ȥ.ȥ)ɗ.
+                     [(𝝺ȥ.ȥ)ɗ] => beta reduction is applied again, reducing the IF to [ȥ := ɗ]
+                      [ȥ := ɗ] => there is nothing else to reduce so ɗ is the evaluated result.
+                            ɗ
+    -- beta reduction's process stops when there are either no more heads or lambdas left to apply
+        or no more arguments to apply functions to. 
+    -- computation process:
+        1.)  intial lambda
+        2.) a finite sequence of lambdas terms each deduced from the procedding term by BR.
+        3.) keep following this sequence untill there are no more heads left and no more arguments to apply functions to.
