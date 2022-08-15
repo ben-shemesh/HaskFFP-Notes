@@ -171,3 +171,11 @@ Chapter 1
             4.) there is no z in the body to apply the 1. we eliminate the head.
             5.) the final result is:
                 𝑎
+1.7 Evaluation is simplification
+    -- Beta normal form is when the expression can no longer beta reduced.
+        i.e a fully evaluated expression/ fully executed program.
+    -- normal form is just another name for beta normal form.
+    -- 𝝺𝞌.𝞌 is in normal form, there is nothing to reduce there is nothing for the
+        arguments to be applied to.
+    -- (𝝺𝞌.𝞌)ȥ is not in normal form because the IF has not been applied to a FV, the normal form
+        would be ȥ. 
