@@ -1,76 +1,78 @@
 Chapter 1
+Date 8-13-22
 1.2
--- Functions in Haskell are first class meaning they can be used 
-    -- as values or passed as arguments or imputs in other functions
-    -- ie as HOFs.
--- All FP based on lambda calculus. Haskell is a pure FPL
-    -- purity == referential transparency (RT);
-        -- means the same function given the same arguments to be evaluated
-        -- will always return the same results in a pure FPL just as in Math.
+    -- Functions in Haskell are first class meaning they can be used 
+        -- as values or passed as arguments or imputs in other functions
+        -- ie as HOFs.
+    -- All FP based on lambda calculus. Haskell is a pure FPL
+        -- purity == referential transparency (RT);
+            -- means the same function given the same arguments to be evaluated
+            -- will always return the same results in a pure FPL just as in Math.
 1.3
--- Functions are relation mechanisims between a set of
-    -- possible inputs and a set of possible outputs
-    -- arguments are always mapped to the parameters
-        ex. 😎
-                ƒ(1) = A 
-                ƒ(2) = B
-                ƒ(3) = C
-            -- the input (domain) is set to {1,2,3} and th outputs (codomain)
-            -- are {A, B, C}
-        -- The most important factor is that these functions will always
-            return (A) given the input (1) with no exceptions.
+    -- Functions are relation mechanisims between a set of
+        -- possible inputs and a set of possible outputs
+        -- arguments are always mapped to the parameters
+            ex. 😎
+                    ƒ(1) = A 
+                    ƒ(2) = B
+                    ƒ(3) = C
+                -- the input (domain) is set to {1,2,3} and th outputs (codomain)
+                -- are {A, B, C}
+            -- The most important factor is that these functions will always
+                return (A) given the input (1) with no exceptions.
 
-    ex. of invalid 😵‍💫
-              ƒ(1) = X
-              ƒ(1) = Y
-              ƒ(2) = Z
-            -- this is incorrect because of the principal of RT
-                the same input must produce the same output, it should be predictable
-    
-    -- This is valid, even though there are different inputs the outputs can have the
-        same value, this is no problem
+        ex. of invalid 😵‍💫
+                ƒ(1) = X
+                ƒ(1) = Y
+                ƒ(2) = Z
+                -- this is incorrect because of the principal of RT
+                    the same input must produce the same output, it should be predictable
+        
+        -- This is valid, even though there are different inputs the outputs can have the
+            same value, this is no problem
 
-    ƒ(1) = A 
-    ƒ(2) = A
-    ƒ(3) = A
-    -- Just as this is valid:
-    ƒ (a b) = \a b -> a(3) + b(2) = 5
-    ƒ (c d) = \c d -> c(4) + d(1) = 5
-    ƒ (e f) = \e f -> e(5) + e(0) = 5
--- The gist is the importance of the relationship betwenn the inputs and outputs,
-   that once a function is given an input the output should be predictable/consistant.
+        ƒ(1) = A 
+        ƒ(2) = A
+        ƒ(3) = A
+        -- Just as this is valid:
+        ƒ (a b) = \a b -> a(3) + b(2) = 5
+        ƒ (c d) = \c d -> c(4) + d(1) = 5
+        ƒ (e f) = \e f -> e(5) + e(0) = 5
+    -- The gist is the importance of the relationship betwenn the inputs and outputs,
+    that once a function is given an input the output should be predictable/consistant.
 
--- Functions are nothing but mappings of a set of inputs to a set of outputs. 
+    -- Functions are nothing but mappings of a set of inputs to a set of outputs. 
+Date 8-14-22
 1.4
--- Lambda calculus has three basic components/lambda terms
-    1. ) expression 2.) variables 3.) abstractions
-    An expression is a superset of the other 2, variables names, an abstractions or a combonation.
-    -- the simplest expression is a single variable.
-    -- variables have no meaning or value; they are only names for potential
-        inputs in a function.
-    -- and abstraction is a function. 
-    -- abstractions consist of 2 parts: the head and the body.
-        the head of the function is a 𝝺 (lambda) followed by a variable name
-        the body of the function is also an expression 
-            a simple function might look like this:
+    -- Lambda calculus has three basic components/lambda terms
+        1. ) expression 2.) variables 3.) abstractions
+        An expression is a superset of the other 2, variables names, an abstractions or a combonation.
+        -- the simplest expression is a single variable.
+        -- variables have no meaning or value; they are only names for potential
+            inputs in a function.
+        -- and abstraction is a function. 
+        -- abstractions consist of 2 parts: the head and the body.
+            the head of the function is a 𝝺 (lambda) followed by a variable name
+            the body of the function is also an expression 
+                a simple function might look like this:
 
-                𝝺𝞌 𝞌 => is called and anonymous function (AF)
+                    𝝺𝞌 𝞌 => is called and anonymous function (AF)
 
-            the variable (𝞌) name in the head (𝝺𝞌)is the parameter
-            and connects all the instances of the same variable in the function body.
-            . each 𝞌 will have the value of that argument
+                the variable (𝞌) name in the head (𝝺𝞌)is the parameter
+                and connects all the instances of the same variable in the function body.
+                . each 𝞌 will have the value of that argument
 
-        -- a named function can be called by another function by an AF cannot.
-    -- Alpha equivalence (AE)
-        the typical expression of AE in Lambda cal:
-            𝝺𝞌 𝞌
-        the variable is not semantically meaningful expect in the role of a 
-        singular expression, this is AE.
-            𝝺𝞌.𝞌
-            𝝺ȥ.ȥ
-            𝝺ɗ.ɗ
-        these all mean the same thing, a mapping of the variable in the head with that
-        in the body.
+            -- a named function can be called by another function by an AF cannot.
+        -- Alpha equivalence (AE)
+            the typical expression of AE in Lambda cal:
+                𝝺𝞌 𝞌
+            the variable is not semantically meaningful expect in the role of a 
+            singular expression, this is AE.
+                𝝺𝞌.𝞌
+                𝝺ȥ.ȥ
+                𝝺ɗ.ɗ
+            these all mean the same thing, a mapping of the variable in the head with that
+            in the body.
 1.5 Beta Reduction
     -- once a function takes an argument(s) and the argument(s) is applied, the input value (the argument)
         is then subsituted for the all instances of the bound variables within the body of the
@@ -178,4 +180,17 @@ Chapter 1
     -- 𝝺𝞌.𝞌 is in normal form, there is nothing to reduce there is nothing for the
         arguments to be applied to.
     -- (𝝺𝞌.𝞌)ȥ is not in normal form because the IF has not been applied to a FV, the normal form
-        would be ȥ. 
+        would be ȥ.
+1.8 Combinators
+    -- combinators are lambda expressions that have no FV
+    -- they combine the arguments they are given.
+        -- valid:
+            𝜆𝑥.𝑥
+            𝜆𝑥𝑦𝑧.𝑥𝑧(𝑦𝑧)
+            𝜆𝑥𝑦.𝑥
+        -- invalid:
+            𝜆𝑦.𝑥 , the x is a FV and is not bound to any arguments in the lambda expression.
+            𝜆𝑥.𝑥𝑧 , x is bound to the head but z is a FV
+1.9
+    -- no super important information to add.
+    
