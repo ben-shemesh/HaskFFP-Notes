@@ -191,6 +191,13 @@ Date 8-14-22
         -- invalid:
             𝜆𝑦.𝑥 , the x is a FV and is not bound to any arguments in the lambda expression.
             𝜆𝑥.𝑥𝑧 , x is bound to the head but z is a FV
-1.9
-    -- no super important information to add.
-    
+1.9 Divegence
+    -- not all lambdas reduce to a beta normal form, not because they are already in normal form
+        but because they diverge.
+    -- diverge means that it is stuck in a loop of beta reduction.
+    -- normally lambda terms should reduce to beta normal form, this is called convergeing.
+        ex. (𝜆𝑥.𝑥𝑥)(𝜆𝑥.𝑥𝑥)
+            the x in the first lambda head becomes the second lambda.
+            - omega diverges.
+
+Chapter 1 xtra notes:
