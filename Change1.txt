@@ -199,5 +199,9 @@ Date 8-14-22
         ex. (𝜆𝑥.𝑥𝑥)(𝜆𝑥.𝑥𝑥)
             the x in the first lambda head becomes the second lambda.
             - omega diverges.
+    -- values that diverge not produce a value or meaninful result.
 
-Chapter 1 xtra notes:
+Chapter 1 extra vocab:
+    Normal order - an evaluating the outmost lambdas first, evaluating
+        nested terms untill there are no longer any arguments to apply.
+    😎😍😍😵‍💫🔫  DONE CHAPTER 1 🎉
