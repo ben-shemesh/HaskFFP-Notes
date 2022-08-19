@@ -1,5 +1,5 @@
 Chapter 1
-Date 8-13-22
+Date 8-13-22 (compeleted in 5 days)
 1.2
     -- Functions in Haskell are first class meaning they can be used 
         -- as values or passed as arguments or imputs in other functions
