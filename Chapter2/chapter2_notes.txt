@@ -1,0 +1,34 @@
+2.3 Understanding expressions
+    - Everything in haskell is an expression or decleration
+        - Expressions = values, combinations of values and/or functions
+            applied to values.
+            - All expressions evaluate to a value.
+            -literal values evaluate to themselves; i.e and identity functions
+        - Declarations = are top-level bindings which can be used ro name 
+            expressions.
+            - onced named they can be used multiple times without copying the 
+                expressions over and over.
+
+        ex. of expressions.
+            1 
+            1 + 1
+            "Adonis"
+
+        expressions can be nested as well.
+        ex. nested expressions
+            (1 + 2)  * 3 evaluates to 9
+            ((1 + 2) * 3) + 100 evaluates to 109
+        
+        - Normal form
+            - expressions are considered to be in normal forms when there are no
+                more steps that can be taken/ they are in an irreducible form.
+        
+            - the normal form of 1 + 1 is 2
+                the expression 1 + 1 can be reduced
+                2 is the normal form because it can no be reduced further.
+            - Reducible expressions are also called redexes.
+            
+                
+        
+
+
