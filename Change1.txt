@@ -5,7 +5,7 @@ Date 8-13-22 (compeleted in 5 days)
         -- as values or passed as arguments or imputs in other functions
         -- ie as HOFs.
     -- All FP based on lambda calculus. Haskell is a pure FPL
-        -- purity == referential transparency (RT);
+        -- purity == {{-> referential transparency <-}} (RT);
             -- means the same function given the same arguments to be evaluated
             -- will always return the same results in a pure FPL just as in Math.
 1.3
@@ -56,7 +56,7 @@ Date 8-14-22
             the body of the function is also an expression 
                 a simple function might look like this:
 
-                    𝝺𝞌 𝞌 => is called and anonymous function (AF)
+                    𝝺𝞌 𝞌 => is called and {{-> anonymous function <-}} (AF)
 
                 the variable (𝞌) name in the head (𝝺𝞌)is the parameter
                 and connects all the instances of the same variable in the function body.
