@@ -27,8 +27,20 @@
                 the expression 1 + 1 can be reduced
                 2 is the normal form because it can no be reduced further.
             - Reducible expressions are also called redexes.
-            
+
                 
-        
+2.4 Functions
+    - expressions are the foundation of Haskell and functions are a specific type of
+        expression.
+    - functions in haskell are related to functions in mathematics 
+        - they map an input(s) to a set of outputs.
+    - a functions is an expression that is applied to an argument and always evaluates to a result.
+    - functions will always evaluate to the same result when applied with the same argument.
+    - functions allow for abstractions.
+        instead of (1 + 3) * 3
+                   (2 + 5) * 3
+                we can abstract it into
+                 Prelude> let triple x y = x + y * 3
+                
 
 
