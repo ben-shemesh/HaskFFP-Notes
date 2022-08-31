@@ -41,6 +41,18 @@
                    (2 + 5) * 3
                 we can abstract it into
                  Prelude> let triple x y = x + y * 3
-                
-
-
+2.5 Evaluation
+    - evalauating means reducing an expression untill it reaches instead
+        simplest form/norma form.
+    - once it reduced to its simplest form its then considered {irreducible}.
+        - irreducible is also know as the {value}
+    - Lazy evaluation = nonstrick evaluation = defers evaluation of terms untill it is forced
+        by other terms that is referring to them.
+    - Values are irreducible.
+        ex irreducible:
+            1 
+            "haskell"
+        ex reducible:
+            1 + 1
+            "haskell" ++ x 
+        
