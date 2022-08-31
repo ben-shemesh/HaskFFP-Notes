@@ -56,3 +56,32 @@
             1 + 1
             "haskell" ++ x 
         
+2.6 Infux operators
+    - Haskell is default to prefix syntax, the funcion being applied is at the beginning of the expression
+     rather than the middle.
+        ex: 
+        Prelude > id 1
+                1
+    - Not all functions in haskell apply the prefix syntax
+        arithmetic operators are the exception, they are influx operator
+            ex:
+             x + x
+    - Operators in Haskell are function themselves 
+        - not all functions are operators
+        - prefix functions can be used as infix functions with a change in syntax.
+            ex:
+             10 `div` 2
+                5
+             div 10 2
+                5
+        - or vise versa
+            ex:
+            (+) 10 5
+                15
+            (-) 20 10
+                10
+    - if the function name is alphanumeric it is prefix by default
+        and not all prefix functions can be made infix.
+    - if the function name is a symbol it is infix by default but can be made prefix
+        by wrapping it in parentheses.
+         
